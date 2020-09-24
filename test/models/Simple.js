@@ -1,11 +1,7 @@
 const model = (sequelize, DataTypes) => {
   const Simple = sequelize.define('Simple', {
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true
-      }
+      type: new DataTypes.VIRTUAL(DataTypes.BOOLEAN)
     }
   })
 
